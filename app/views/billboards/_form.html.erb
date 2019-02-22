@@ -1,0 +1,10 @@
+<h1>Add A Billboard</h1>
+<%= form_for @billboard do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: 'Billboard Name' %>
+    <br />
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar, placeholder: 'Type something here...' %>
+    <br />
+    <%= f.submit %>
+<% end %>

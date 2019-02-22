@@ -1,0 +1,25 @@
+<table class="ui striped table">
+    <thead>
+        <tr class="center aligned">
+            <th colspan="4"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+            <tr class="center aligned">
+                <td>
+                    <img class="ui avatar image small" src="https://robohash.org/<%= @song.avatar %>?set=set4">
+                </td>
+                <td>
+                    <%= @song.name %>
+                </td>
+                <td>
+                    <%= @song.length %>
+                </td>
+                <td>
+                    <%= link_to 'Artist', artist_songs_path(@billboard) %>
+                    <%= link_to '☠︎', [@billboard, @song], method: :delete %>
+                </td>
+            </tr>
+    </tbody>
+</table>

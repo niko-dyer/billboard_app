@@ -1,4 +1,4 @@
 class Song < ApplicationRecord
-  belongs_to :billboard, :through => :artist
-  belongs_to :artist
+  belongs_to :billboard
+  belongs_to :artist, optional: true
 end

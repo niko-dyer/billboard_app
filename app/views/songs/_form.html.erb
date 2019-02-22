@@ -1,0 +1,13 @@
+<h1>Add A Song</h1>
+<%= form_for [@billboard, @song] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: 'Song Name' %>
+    <br />
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar, placeholder: 'Type something here...' %>
+    <br />
+    <%= f.label :length %>
+    <%= f.text_field :length, placeholder: 'Length' %>
+    <br />
+    <%= f.submit %>
+<% end %>
