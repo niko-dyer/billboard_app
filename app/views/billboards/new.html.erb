@@ -1,2 +1,5 @@
-<h1>Billboards#new</h1>
-<p>Find me in app/views/billboards/new.html.erb</p>
+<h1>New Billboard</h1>
+
+<%= render "form", billboard: @billboard %>
+
+<%= link_to "Back", billboards_path %>

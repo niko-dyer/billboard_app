@@ -2,26 +2,26 @@
   <img src="https://robohash.org/<%= @billboard.avatar %>?set=set2" class="ui circular image">
   <%= @billboard.name %>
   <br />
-  <button class="ui basic button"><i class="icon music"></i><%= link_to 'Add Songs', new_billboard_song_path(@billboard)%></button>
+  <button class="ui basic button"><i class="icon music"></i><%= link_to 'Add Artists', new_billboard_artist_path(@billboard)%></button>
 </h1>
 
 <div class="ui grid">
-    <% @billboard.songs.each do |billboard_song| %>
+    <% @billboard.artists.each do |artist| %>
     <div class="sixteen wide mobile eight wide tablet four wide computer column">
         <div class="ui card">
             <div class="image">
-                <img src="https://robohash.org/<%= billboard_song.avatar %>?set=set2" />
+                <img src="https://robohash.org/<%= artist.avatar %>?set=set2" />
             </div>
             <div class="content">
-                <%= link_to "#{billboard_song.name}", [@billboard, @song], class: "header" %>
+                <%= link_to "#{artist.name}", billboard_artist_path(@billboard), class: "header" %>
             </div>
             <div class="extra content">
                 <div class="ui two buttons">
                     <div class="ui basic green button">
-                        <%= link_to 'Edit', [@billboard, @song] %>
+                        <%= link_to 'Edit', [@billboard, @artist] %>
                     </div>
                     <div class="ui basic red button">
-                        <%= link_to 'Destroy', [@billboard, @song], method: :delete, data: { confirm: 'Are you sure?' } %>
+                        <%= link_to 'Destroy', @artist, method: :delete, data: { confirm: 'Are you sure?' } %>
                     </div>
                 </div>
             </div>

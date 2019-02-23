@@ -17,8 +17,7 @@
                     <%= @song.length %>
                 </td>
                 <td>
-                    <%= link_to 'Artist', artist_songs_path(@billboard) %>
-                    <%= link_to '☠︎', [@billboard, @song], method: :delete %>
+                    <%= link_to '☠︎', [@artist, @song], method: :delete %>
                 </td>
             </tr>
     </tbody>

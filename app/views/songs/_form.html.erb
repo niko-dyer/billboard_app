@@ -1,13 +1,13 @@
-<h1>Add A Song</h1>
-<%= form_for [@billboard, @song] do |f| %>
+<h1>Add a Song</h1>
+<%= form_with(class: "ui form") do |f| %>
     <%= f.label :name %>
-    <%= f.text_field :name, required: true, placeholder: 'Song Name' %>
+    <%= f.text_field :name, required: true %>
     <br />
     <%= f.label :avatar %>
-    <%= f.text_field :avatar, placeholder: 'Type something here...' %>
+    <%= f.text_field :avatar, placeholder: "Type something here..." %>
     <br />
     <%= f.label :length %>
-    <%= f.text_field :length, placeholder: 'Length' %>
+    <%= f.text_field :length %>
     <br />
-    <%= f.submit %>
+    <%= f.submit nil, class: "ui button blue" %>
 <% end %>

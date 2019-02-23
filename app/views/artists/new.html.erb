@@ -1,2 +1,5 @@
-<h1>Artists#new</h1>
-<p>Find me in app/views/artists/new.html.erb</p>
+<h1>New Artist</h1>
+
+<%= render "form", billboard: @billboard, artist: @artist %>
+
+<%= link_to 'Back', billboard_artists_path(@billboard) %>

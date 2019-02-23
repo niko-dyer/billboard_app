@@ -1,0 +1,14 @@
+<h1 class="ui header"><%= @artist.id ? 'Edit Artist' : 'Add Artist' %></h1>
+<hr />
+<%= form_with(model: [@billboard, @artist], local: true, class: "ui form") do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, require: true, autofocus: true %>
+    <br />
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar, placeholder: "Type something here..." %>
+    <br />
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+    <br />
+    <%= f.submit nil, class: "ui button" %>
+<% end %>
