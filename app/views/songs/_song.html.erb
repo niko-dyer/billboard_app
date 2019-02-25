@@ -6,19 +6,21 @@
     </thead>
 
     <tbody>
+    <% @artist.songs.each do |song| %>
             <tr class="center aligned">
                 <td>
-                    <img class="ui avatar image small" src="https://robohash.org/<%= @song.avatar %>?set=set4">
+                    <img class="ui avatar image small" src="https://robohash.org/<%= song.avatar %>?set=set3">
                 </td>
                 <td>
-                    <%= @song.name %>
+                    <%= song.name %>
                 </td>
                 <td>
-                    <%= @song.length %>
+                    <%= song.length %>
                 </td>
                 <td>
-                    <%= link_to '☠︎', [@artist, @song], method: :delete %>
+                    <%= link_to '☠︎', [@billboard, @artist, song], method: :delete %>
                 </td>
             </tr>
+    <% end %>
     </tbody>
 </table>

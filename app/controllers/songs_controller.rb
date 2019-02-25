@@ -18,9 +18,8 @@ class SongsController < ApplicationController
 
   def create
     @song = @artist.songs.new(song_params)
-    
     if @song.save
-      redirect_to billboard_artist_path
+      redirect_to billboard_artist_path(@billboard, @artist)
     else
       render :new
     end
@@ -35,8 +34,8 @@ class SongsController < ApplicationController
   end
 
   def destroy
-    @artist.song.destroy
-    redirect_to [@artist]
+    @song.destroy
+    redirect_to [@billboard, @artist]
   end
 
   private

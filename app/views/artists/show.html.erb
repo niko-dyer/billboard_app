@@ -7,7 +7,5 @@
   <button class="ui basic button"><i class="icon music"></i><%= link_to 'Add Song', new_billboard_artist_song_path(@billboard, @artist) %></button>
 </h1>
 <h2>Songs</h2>
-<% @artist.songs.each do |song| %>
-  <%= render 'songs/song', { song: song } %>
-<% end %>
+  <%= render 'songs/song' %>
 <br />

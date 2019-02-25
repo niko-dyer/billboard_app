@@ -1,5 +1,5 @@
 <h1>Add a Song</h1>
-<%= form_for(new_billboard_artist_song_path, class: "ui form") do |f| %>
+<%= form_for [@billboard, @artist, @song], class: "ui form" do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name, required: true %>
     <br />
