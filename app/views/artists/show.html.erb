@@ -1,8 +1,9 @@
 <br />
+<%= link_to 'Home', billboards_path %>
 <h1 class="ui header">
   <img src="https://robohash.org/<%= @artist.avatar %>?set=set2" class="ui circular image">
   <%= @artist.name %>
-  <br />
+<br />
   <button class="ui basic button"><i class="icon music"></i><%= link_to 'Add Song', new_billboard_artist_song_path(@billboard, @artist) %></button>
 </h1>
 <h2>Songs</h2>
